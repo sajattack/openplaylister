@@ -1,0 +1,11 @@
+playlist_generator_env
+*.pyc
+*.egg
+checkpoints
+data-bin
+file_index.json
+*lb*.json
+test.txt
+valid.txt
+train.txt
+*.m3u
