@@ -7,11 +7,11 @@ Think of it as a streaming service playlist recommendation algorithm that runs
 on a local file-based music collection.
 
 ## Scripts 
-`preprocess.sh` - processes a listenbrainz json into a sequence of track ids which we will use as tokens for our seq2seq ai
-`train.sh` - trains the ai model to recognize sequence patterns in your listening history
-`generate.sh` - runs inference on the ai model (outputs new sequences of track ids which will become our playlists
-`index_songs.py` - associates musicbrainz track ids to local files
-`write_playlist.py` - parses the output of generate.sh and produces an m3u playlist file using the file index
+- `preprocess.sh` - processes a listenbrainz json into a sequence of track ids which we will use as tokens for our seq2seq ai
+- `train.sh` - trains the ai model to recognize sequence patterns in your listening history
+- `generate.sh` - runs inference on the ai model (outputs new sequences of track ids which will become our playlists
+- `index_songs.py` - associates musicbrainz track ids to local files
+- `write_playlist.py` - parses the output of generate.sh and produces an m3u playlist file using the file index
 
 ## How to use
 - create a python virutalenv and install requirements.txt
