@@ -21,8 +21,8 @@ on a local file-based music collection.
 - train the model using train.sh
 - use musicbrainz picard to write musicbrainz id3 tags to your local music collection https://picard.musicbrainz.org/
 - use `index_songs.py` to read these id3 tags and map ids to local files
-- run `./generate.sh | ./write_playlist.py` to generate an m3u playlist file
--- it will ask  for an "input sentence", put some musicbrainz ids here to start the playlist off with
+- pick a musicbrainz track id to seed the playlist with, example `export mbid=daca2503-2393-40af-8873-39f488c55944`
+- run `echo ${mbid} | ./generate.sh | ./write_playlist.py` to generate an m3u playlist file
 - open the m3u file using your music player
 
 
