@@ -2,6 +2,9 @@
 
 mbids=`cat $1 | jq '.[].track_metadata.mbid_mapping.recording_mbid' | sed -e 's/"//g'`
 
+# reverse the list (default sort order is reverse chrono)
+mbids=`echo $mbids | awk '{ for (i=NF; i>1; i--) printf("%s ",$i); print $1; }'`
+
 len=$((`echo -e ${mbids} | wc -w`))
 
 test_len=$(expr $((len)) / 10)
