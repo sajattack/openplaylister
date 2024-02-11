@@ -16,7 +16,7 @@ mbids = []
 
 inp = inp[inp.find("D-0"):inp.find("P-0")]
 
-for word in inp.split(" "):
+for word in inp.split():
     try:
         # there's lots of other junk in the output 
         # and we only want the uuids
@@ -25,11 +25,13 @@ for word in inp.split(" "):
         #print(mbid)
         mbids.append(str(mbid))
     except Exception as e:
-        print(e)
+        #print(e)
         continue
 
 # remove duplicates while maintaining order
 mbids = list(OrderedDict.fromkeys(mbids))
+
+#print(mbids)
 
 with open("playlist.m3u", "w") as f:
     for mbid in mbids:
